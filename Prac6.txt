@@ -1,0 +1,21 @@
+
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{tikz}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{siunitx}
+\title{Практическая работа №6}
+\author{студент: Бедарев Филипп Денисович    группы 8871}
+\begin{document}
+\maketitle
+\begin{tikzpicture} 
+\newcommand{\D}{7}
+\newcommand{\T}{0.13*(\D)}
+\foreach \f in {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340, 350} 
+	\draw[red,->,>=stealth'] (0,0) -- ({\D*cos(\f)},{\D*sin(\f)}) node[right] {$\f$};
+\foreach \s in {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340, 350} 
+	\draw[green,->,>=stealth'] ({\D*cos(\s)},{\D*sin(\s)}) --++ ({\T*cos(180+3*(\s))},{\T*sin(180+3*(\s))}) node[right] {$\s$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,22 @@
+\documentclass[a4paper,11pt]{article} 
+\usepackage[T2A]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[english,russian]{babel} 
+\usepackage{tikz} 
+\usepackage[european,cuteinductors,smartlabels]{circuitikz} 
+\title{Практическая работа №1}
+\author{студент:Бедарев Филипп Денисович группы 8871} 
+\begin{document}
+\maketitle
+$$\frac{74}{2}= 37, 74 mod 2 = 0$$
+$$\frac{37}{2} = 18, 37 mod 2 = 1$$
+$$\frac{18}{2} = 9, 18 mod 2 =0$$
+$$\frac{9}{2} = 4, 9 mod 2 = 1$$
+$$\frac{4}{2} = 2, 4 mod 2 = 0$$
+$$\frac{2}{2} = 1, 2 mod 2 = 0$$
+$$\frac{1}{2} = 0, 1 mod 2 = 1$$
+$$74_{10}\rightarrow 1001010_{2}$$ 
+Задание №2 
+Перевод числа 1001010 из двоичной системы в десятичную 
+$$1001010_{2}\rightarrow 1\cdot 2^{6}+0\cdot 2^{5}+0\cdot 2^{4}+1\cdot 2^{3}+0\cdot 2^{2}+1\cdot 2^{1}+0\cdot 2^{0}\rightarrow 74_{10}$$ 
+\end{document}
