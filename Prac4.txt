@@ -1,0 +1,39 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{xcolor}
+\title{Практическая работа №4} 
+\author{студент:Бедарев Филипп Денисович группы 8871} 
+\begin{document}
+\maketitle
+$$\alpha=\frac{2\cdot \pi}{3}$$, $$\beta=\frac{\pi}{3}$$ 
+
+
+\begin{tikzpicture}
+
+
+\draw [rounded corners=4pt,color=white,ball color=blue,smooth] (0,0,0)
+circle (1) node {H};
+
+\draw [rounded corners=4pt,color=white,ball color=blue,smooth] (-1.5,5.2,-2.6)
+circle (1) node {H};
+
+\draw [rounded corners=4pt,color=white,ball color=blue,smooth] (-3,0,-5.2)
+circle (1) node {H};
+
+\draw [rounded corners=4pt,color=white,ball color=blue,smooth] (-5.74,1.73,-0.15)
+circle (1) node {H};
+
+\begin{scope}[scale=1,scale=1]
+\draw [rounded corners=1pt,color=white,ball color=red,smooth] (-2.56,1.73,-1.99)
+circle (2) node {C};
+
+
+\end{scope}
+\end{tikzpicture}
+
+\end{document}
