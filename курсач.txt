@@ -89,5 +89,87 @@ plot(0:0.01:2*\%pi,h)\\
     \end{minipage}
     \end{center}
     \end{figure}
+\par
+{\bf И}сходя из вида графика можно предположить о наличии трех корней. \\ \par
+{\bf И}спользуя полученное данные о поведении функции воспользуемся функцией {\bf fsolve}:
+\\x0 = [3, 3.9,4.5,5.5];
+\\$[x,v] = fsolve(x0,h)$
+\\
+$v =$\\
+$-2.220D-16$  0. $7.772D-16$\\
+$x =$\\
+2.6179939 4.1887902 5.759865
+
+{\bf П}олученные точки изображены на Рисунке №2.
+\begin{figure}[H]
+\begin{center}
+\begin{minipage}[h]{0.65\linewidth}
+\center{\includegraphics[width=1\linewidth]{3.png}}  \\
+\frametitle{Рисунок №2. График функции {\bf h(x)} с корнями, найденными численно}
+\end{minipage}
+\end{center}
+\end{figure}\\
+{\bf А}нализируя полученные значения v можно заметить, что два из них не являются нулевыми, так как решения {\bf fsolve} находятся с некоторой заданной степенью точности. \par
+{\bf П}редполагая, что корни линейной комбинации таких функций, как $sin$ и $cos$ могут быть кратны $\pi$, разделим корни {\bf h(x)} на $\pi$:
+
+$x/\%\pi$ = 0.8(3)  1.(3) 1.8(3)
+
+{\bf П}олученные десятичные дроби напоминают о числах кратных 1/3. Разделим на это число:
+
+$3\cdot x/\%\pi $=2.5 4 5.5
+
+{\bfТ}аким образом корни уравнения можно записать в следующей форме:
+$$x_1=\frac{5}{6}\cdot \pi+2n\pi,n\in Z$$
+$$x_2=\frac{8}{6}\cdot \pi+2n\pi,n\in Z$$
+$$x_3=\frac{11}{6}\cdot \pi+2n\pi,n\in Z$$
+
+{\bfТ}ак путём преобразований из численного решения было полученно решение аналитическое.
+\newpage
+{\bfО}тыскание аналитического решения при помощи функции {\bf solve} из системы компьютерной алгебры {\bf «Reduce»}:
+
+{\bf П}ри попытке разрешить уравнение {\bf h(x)= 0} относительно $x$:\\
+$$solve(\sqrt3 \cdot sin(x)+cos(x)-cos(2 \cdot x+\pi/3)-1,x);$$\\
+получаем
+\begin{figure}[H]
+\begin{center}
+\begin{minipage}[h]{0.65\linewidth}
+\center{\includegraphics[width=1\linewidth]{4.png}}  \\
+\frametitle{}
+\end{minipage}
+\end{center}
+\end{figure}
+
+{\bf P}ешение данного уравнения не найдено.\\ \par
+{\bf У}простим данное уравнение, воспользовавшись двумя тригонометрическими тождествами: 
+$${\bf sin(x+y)=sin(x)cos(y)+cos(x)sin(y)}$$
+$${\bf cos(2x)=1-2sin^2(x) }$$
+$$\sqrt{3}sin(x)+cos(x),g(x)-cos(2x+\frac{\pi}{3})+1$$ $$=2(sin(x)cos(\frac{\pi}{6})+cos(x)sin(\frac{\pi}{6}))+2sin^2(x+\frac{\pi}{6})$$ $$=2(sin(x+\frac{\pi}{6})+sin^2(x+\frac{\pi}{6})$$
+
+и получим тривиальное уравнение, эквивалентное исходному
+$$2(sin(x+\frac{\pi}{6})+sin^2(x+\frac{\pi}{6})=0$$
+\\ \par
+{\bf П}рименим к нему функцию solve:\\
+$solve(2sin(x+\pi/6)*(1+sin(x+\pi/6)))$;
+и получим решение:
+\newpage
+
+\begin{figure}[H]
+\begin{center}
+\begin{minipage}[h]{0.65\linewidth}
+\center{\includegraphics[width=1\linewidth]{5.png}}  \\
+\frametitle{}
+\end{minipage}
+\end{center}
+\end{figure}
+
+
+где {\bf arbint} является произвольным целым числом. Следовательно корни уравнения умеют вид:
+
+$$x_1=\frac{5}{6}*\pi+2n\pi,n\in Z$$
+$$x_2=-\frac{1}{6}*\pi+2n\pi,n\in Z$$
+$$x_3=\frac{8}{6}*\pi+2n\pi,n\in Z$$\\ \par
+{\bfП}ериодическое решение для $x_2$ можно записать в виде:
+$$x_2=\frac{11}{6}*\pi+2n\pi,n\in Z$$\\
+Таким образом, применив два различных подхода, мы отыскали один и тот же набор корней нелинейной функции
     \printbibliography
 \end{document}
