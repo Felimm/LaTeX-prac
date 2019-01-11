@@ -10,13 +10,13 @@
 \author{студент:Бедарев Филипп Денисович группы 8871} 
 \begin{document}
 \maketitle
-\newcommand{\alfa}{15} 
-\newcommand{\tetta}{15}
+\newcommand{\alfa}{0} 
+\newcommand{\tetta}{90}
 
 \begin{tikzpicture}[rotate=\tetta]
 
-\draw ({1*(cos(\alfa)-sin(\alfa))},5,{1*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))}) -- ({10*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))}) -- ({10*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},5,{10*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},5,{1*(cos(\alfa)+sin(\alfa))});
-\draw({1*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))});
+\fill[red] ({1*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))}) -- ({10*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))}) -- ({10*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))});
+\fill[green]({1*(cos(\alfa)-sin(\alfa))},5,{1*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))})-- ({1*(cos(\alfa)-sin(\alfa))},5,{10*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},5,{1*(cos(\alfa)+sin(\alfa))});
 
 \draw [rounded corners=4pt,color=white,ball color=blue,smooth] ({1*(cos(\alfa)-sin(\alfa))},5,{1*(cos(\alfa)+sin(\alfa))})
 circle (0.5) node {1};
